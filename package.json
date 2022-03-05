@@ -1,7 +1,7 @@
 {
-  "name": "Frat Ratz NFT",
+  "name": "FratRatzNFT",
   "version": "1.0.0",
-  "description": "",
+  "description": "RatzNFT",
   "main": "tailwind.config.js",
   "scripts": {
     "build": "npx tailwindcss -i ./index.css -o ./tailwind.css -w"
