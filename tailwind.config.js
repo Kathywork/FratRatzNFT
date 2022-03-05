@@ -1,4 +1,5 @@
 module.exports = {
+  
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -19,6 +20,7 @@ module.exports = {
     },
   },
   variants: {
+    fill: ['hover', 'focus'],
     extend: {},
   },
 

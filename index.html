@@ -4,23 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
+    <title>Frat Ratz NFT</title>
+	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="tailwind.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+	<script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
 
 </head>
 <body class="bg-body text-white font-poppins pb-12">
     
     <header class="py-6">
         <div class="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
-            <div class="text-lg font-bold">Jonathan.doe</div>
+            <!-- Logo -->
+			<div>
+				<img src="img/logorat.png" alt="logo" class="w-24 lg:w-36 h-auto"/>
+			</div>
+			<!-- Menu -->
             <div class="hidden md:flex space-x-12 items-center">
                 <a href="#" class="text-selected-text">Home</a>
-                <a href="#work">My work</a>
-                <a href="#clients">Clients</a>
-                <a href="#hire"><button class="px-6 py-2 bg-theme font-bold">Hire me</button></a>
+                <a href="#roadmap">Roadmap</a>
+                <a href="#team">Team</a>
+				<a href="#faq">F.A.Q</a>
+                <!-- <a href="#hire"><button class="px-6 py-2 bg-theme font-bold">Mint Now</button></a> -->
+				<div class="flex space-x-5">
+					<a href="https://twitter.com/" target="_blank" class="">
+						<svg class="hover:fill-current" width="25" height="25" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_17_80)">
+							<path d="M15.1003 43.5C33.2091 43.5 43.1166 28.4935 43.1166 15.4838C43.1166 15.0619 43.1072 14.6307 43.0884 14.2088C45.0158 12.815 46.679 11.0886 48 9.11066C46.205 9.90926 44.2993 10.4308 42.3478 10.6575C44.4026 9.42588 45.9411 7.491 46.6781 5.21159C44.7451 6.35718 42.6312 7.16528 40.4269 7.60128C38.9417 6.02318 36.978 4.97829 34.8394 4.62816C32.7008 4.27803 30.5064 4.64216 28.5955 5.66425C26.6846 6.68635 25.1636 8.30947 24.2677 10.2827C23.3718 12.2559 23.1509 14.4693 23.6391 16.5807C19.725 16.3842 15.8959 15.3675 12.4 13.5963C8.90405 11.825 5.81939 9.33893 3.34594 6.29909C2.0888 8.46655 1.70411 11.0314 2.27006 13.4722C2.83601 15.9131 4.31013 18.047 6.39281 19.44C4.82926 19.3904 3.29995 18.9694 1.93125 18.2119V18.3338C1.92985 20.6084 2.7162 22.8132 4.15662 24.5736C5.59704 26.334 7.60265 27.5412 9.8325 27.99C8.38411 28.3863 6.86396 28.4441 5.38969 28.1588C6.01891 30.1149 7.24315 31.8258 8.89154 33.0527C10.5399 34.2796 12.5302 34.9613 14.5847 35.0025C11.0968 37.7423 6.78835 39.2283 2.35313 39.2213C1.56657 39.2201 0.780798 39.1719 0 39.0769C4.50571 41.9676 9.74706 43.5028 15.1003 43.5Z" fill="white"/>
+							</g>
+							<defs>
+							<clipPath id="clip0_17_80">
+							<rect width="48" height="48" fill="white"/>
+							</clipPath>
+							</defs>
+							</svg>
+					</a>
+					<a href="https://discord.com/" target="_blank" class="">
+						<svg width="25" height="25" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M40.634 8.31127C37.5747 6.90751 34.294 5.87327 30.8638 5.28093C30.8013 5.2695 30.7389 5.29806 30.7067 5.3552C30.2848 6.10563 29.8175 7.08463 29.4902 7.85412C25.8008 7.30178 22.1304 7.30178 18.5166 7.85412C18.1893 7.06753 17.705 6.10563 17.2811 5.3552C17.249 5.29997 17.1866 5.2714 17.1241 5.28093C13.6958 5.87138 10.4151 6.90561 7.35387 8.31127C7.32737 8.32269 7.30465 8.34176 7.28958 8.3665C1.06678 17.6632 -0.6379 26.7314 0.19836 35.6872C0.202144 35.731 0.22674 35.7729 0.260796 35.7996C4.36642 38.8147 8.34341 40.6451 12.2466 41.8583C12.309 41.8774 12.3752 41.8546 12.415 41.8031C13.3383 40.5423 14.1613 39.2128 14.867 37.8147C14.9086 37.7328 14.8688 37.6357 14.7837 37.6033C13.4783 37.1081 12.2352 36.5043 11.0395 35.8187C10.9449 35.7634 10.9373 35.6281 11.0243 35.5634C11.2759 35.3748 11.5276 35.1786 11.7679 34.9805C11.8114 34.9444 11.872 34.9367 11.9231 34.9596C19.7786 38.5461 28.2831 38.5461 36.0459 34.9596C36.097 34.9348 36.1576 34.9425 36.203 34.9787C36.4433 35.1767 36.6949 35.3748 36.9484 35.5634C37.0354 35.6281 37.0298 35.7634 36.9352 35.8187C35.7394 36.5176 34.4964 37.1081 33.189 37.6014C33.1039 37.6338 33.0661 37.7328 33.1077 37.8147C33.8285 39.2108 34.6515 40.5403 35.5578 41.8012C35.5956 41.8546 35.6637 41.8774 35.7262 41.8583C39.6483 40.6451 43.6252 38.8147 47.7309 35.7996C47.7668 35.7729 47.7895 35.7329 47.7933 35.6891C48.7942 25.3352 46.117 16.3414 40.6964 8.3684C40.6832 8.34176 40.6605 8.32269 40.634 8.31127ZM16.04 30.2341C13.675 30.2341 11.7263 28.0628 11.7263 25.3962C11.7263 22.7297 13.6372 20.5584 16.04 20.5584C18.4617 20.5584 20.3916 22.7487 20.3538 25.3962C20.3538 28.0628 18.4428 30.2341 16.04 30.2341ZM31.9895 30.2341C29.6245 30.2341 27.6758 28.0628 27.6758 25.3962C27.6758 22.7297 29.5867 20.5584 31.9895 20.5584C34.4113 20.5584 36.3411 22.7487 36.3033 25.3962C36.3033 28.0628 34.4113 30.2341 31.9895 30.2341Z" fill="white"/>
+							</svg>
+							
+					</a>
+					<a href="https://instagram.com/" target="_blank" class="">
+						<svg width="25" height="25" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M24 4.32187C30.4125 4.32187 31.1719 4.35 33.6938 4.4625C36.0375 4.56562 37.3031 4.95938 38.1469 5.2875C39.2625 5.71875 40.0688 6.24375 40.9031 7.07812C41.7469 7.92188 42.2625 8.71875 42.6938 9.83438C43.0219 10.6781 43.4156 11.9531 43.5188 14.2875C43.6313 16.8187 43.6594 17.5781 43.6594 23.9813C43.6594 30.3938 43.6313 31.1531 43.5188 33.675C43.4156 36.0188 43.0219 37.2844 42.6938 38.1281C42.2625 39.2438 41.7375 40.05 40.9031 40.8844C40.0594 41.7281 39.2625 42.2438 38.1469 42.675C37.3031 43.0031 36.0281 43.3969 33.6938 43.5C31.1625 43.6125 30.4031 43.6406 24 43.6406C17.5875 43.6406 16.8281 43.6125 14.3063 43.5C11.9625 43.3969 10.6969 43.0031 9.85313 42.675C8.7375 42.2438 7.93125 41.7188 7.09688 40.8844C6.25313 40.0406 5.7375 39.2438 5.30625 38.1281C4.97813 37.2844 4.58438 36.0094 4.48125 33.675C4.36875 31.1438 4.34063 30.3844 4.34063 23.9813C4.34063 17.5688 4.36875 16.8094 4.48125 14.2875C4.58438 11.9437 4.97813 10.6781 5.30625 9.83438C5.7375 8.71875 6.2625 7.9125 7.09688 7.07812C7.94063 6.23438 8.7375 5.71875 9.85313 5.2875C10.6969 4.95938 11.9719 4.56562 14.3063 4.4625C16.8281 4.35 17.5875 4.32187 24 4.32187ZM24 0C17.4844 0 16.6688 0.028125 14.1094 0.140625C11.5594 0.253125 9.80625 0.665625 8.2875 1.25625C6.70312 1.875 5.3625 2.69062 4.03125 4.03125C2.69063 5.3625 1.875 6.70313 1.25625 8.27813C0.665625 9.80625 0.253125 11.55 0.140625 14.1C0.028125 16.6687 0 17.4844 0 24C0 30.5156 0.028125 31.3312 0.140625 33.8906C0.253125 36.4406 0.665625 38.1938 1.25625 39.7125C1.875 41.2969 2.69063 42.6375 4.03125 43.9688C5.3625 45.3 6.70313 46.125 8.27813 46.7344C9.80625 47.325 11.55 47.7375 14.1 47.85C16.6594 47.9625 17.475 47.9906 23.9906 47.9906C30.5063 47.9906 31.3219 47.9625 33.8813 47.85C36.4313 47.7375 38.1844 47.325 39.7031 46.7344C41.2781 46.125 42.6188 45.3 43.95 43.9688C45.2812 42.6375 46.1063 41.2969 46.7156 39.7219C47.3063 38.1938 47.7188 36.45 47.8313 33.9C47.9438 31.3406 47.9719 30.525 47.9719 24.0094C47.9719 17.4938 47.9438 16.6781 47.8313 14.1188C47.7188 11.5688 47.3063 9.81563 46.7156 8.29688C46.125 6.70312 45.3094 5.3625 43.9688 4.03125C42.6375 2.7 41.2969 1.875 39.7219 1.26562C38.1938 0.675 36.45 0.2625 33.9 0.15C31.3313 0.028125 30.5156 0 24 0Z" fill="white"/>
+							<path d="M24 11.6719C17.1938 11.6719 11.6719 17.1938 11.6719 24C11.6719 30.8062 17.1938 36.3281 24 36.3281C30.8062 36.3281 36.3281 30.8062 36.3281 24C36.3281 17.1938 30.8062 11.6719 24 11.6719ZM24 31.9969C19.5844 31.9969 16.0031 28.4156 16.0031 24C16.0031 19.5844 19.5844 16.0031 24 16.0031C28.4156 16.0031 31.9969 19.5844 31.9969 24C31.9969 28.4156 28.4156 31.9969 24 31.9969Z" fill="white"/>
+							<path d="M39.6937 11.1843C39.6937 12.778 38.4 14.0624 36.8156 14.0624C35.2219 14.0624 33.9375 12.7687 33.9375 11.1843C33.9375 9.59053 35.2313 8.30615 36.8156 8.30615C38.4 8.30615 39.6937 9.5999 39.6937 11.1843Z" fill="white"/>
+							</svg>							
+					</a>
+				</div>
             </div>
             <div class="md:hidden">
                 <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 17.5H0.25V14.6667H13V17.5ZM25.75 10.4167H0.25V7.58333H25.75V10.4167ZM25.75 3.33333H13V0.5H25.75V3.33333Z" fill="white"/></svg>
@@ -37,180 +71,324 @@
                     <a href="#" class="nav-dot selected-circle block w-7 h-7 rounded-full border-4 border-nav bg-body">
                         <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Home</span>
                     </a>
-                    <a href="#work" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
-                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Work</span>
+                    <a href="#roadmap" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
+                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Roadmap</span>
                     </a>
-                    <a href="#clients" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
-                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Clients</span>
+                    <a href="#team" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
+                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Team</span>
                     </a>
-                    <a href="#hire" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
-                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Hire</span>
+					<a href="#faq" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
+                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">F.A.Q</span>
                     </a>
                 </div>
             </nav>
 
             <div class="flex flex-wrap lg:ml-20 justify-center md:justify-start max-w-xl mt-0 md:my-36">
-                <h1 class="font-bold text-5xl md:text-6xl lg:text-7xl text-center md:text-left">Building<br> beautiful web experiences.</h1>
+                <h1 class="font-bold text-5xl md:text-6xl lg:text-7xl text-center md:text-left">A brand for the metaverse.<br>Built by the community.</h1>
                 <div class="w-full flex justify-center md:justify-start">
-                    <button class="px-8 py-4 bg-theme text-white font-bold mt-12 flex items-center space-x-3">
-                        <div>
-                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14.4375 11C14.4375 11.9117 14.0753 12.786 13.4307 13.4307C12.786 14.0753 11.9117 14.4375 11 14.4375C10.0883 14.4375 9.21398 14.0753 8.56932 13.4307C7.92466 12.786 7.5625 11.9117 7.5625 11C7.5625 10.0883 7.92466 9.21398 8.56932 8.56932C9.21398 7.92466 10.0883 7.5625 11 7.5625C11.9117 7.5625 12.786 7.92466 13.4307 8.56932C14.0753 9.21398 14.4375 10.0883 14.4375 11Z" fill="white"/>
-                                <path d="M0 11C0 11 4.125 3.4375 11 3.4375C17.875 3.4375 22 11 22 11C22 11 17.875 18.5625 11 18.5625C4.125 18.5625 0 11 0 11ZM11 15.8125C12.2764 15.8125 13.5004 15.3055 14.403 14.403C15.3055 13.5004 15.8125 12.2764 15.8125 11C15.8125 9.72365 15.3055 8.49957 14.403 7.59705C13.5004 6.69453 12.2764 6.1875 11 6.1875C9.72365 6.1875 8.49957 6.69453 7.59705 7.59705C6.69453 8.49957 6.1875 9.72365 6.1875 11C6.1875 12.2764 6.69453 13.5004 7.59705 14.403C8.49957 15.3055 9.72365 15.8125 11 15.8125Z" fill="white"/>
-                            </svg>								
-                        </div>
-                        <span>View my work.</span>
-                    </button>
+					<a href="http://opensea.io" target="_blank">
+						<button class="px-8 py-4 bg-theme text-white font-bold mt-12 flex items-center space-x-3 hover:bg-yellow-300 mb-20">
+							<div>
+								<svg width="40" height="40" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M45 0C20.151 0 0 20.151 0 45C0 69.849 20.151 90 45 90C69.849 90 90 69.849 90 45C90 20.151 69.858 0 45 0ZM22.203 46.512L22.392 46.206L34.101 27.891C34.272 27.63 34.677 27.657 34.803 27.945C36.756 32.328 38.448 37.782 37.656 41.175C37.323 42.57 36.396 44.46 35.352 46.206C35.217 46.458 35.073 46.71 34.911 46.953C34.839 47.061 34.713 47.124 34.578 47.124H22.545C22.221 47.124 22.032 46.773 22.203 46.512ZM74.376 52.812C74.376 52.983 74.277 53.127 74.133 53.19C73.224 53.577 70.119 55.008 68.832 56.799C65.538 61.38 63.027 67.932 57.402 67.932H33.948C25.632 67.932 18.9 61.173 18.9 52.83V52.56C18.9 52.344 19.08 52.164 19.305 52.164H32.373C32.634 52.164 32.823 52.398 32.805 52.659C32.706 53.505 32.868 54.378 33.273 55.17C34.047 56.745 35.658 57.726 37.395 57.726H43.866V52.677H37.467C37.143 52.677 36.945 52.299 37.134 52.029C37.206 51.921 37.278 51.813 37.368 51.687C37.971 50.823 38.835 49.491 39.699 47.97C40.284 46.944 40.851 45.846 41.31 44.748C41.4 44.55 41.472 44.343 41.553 44.145C41.679 43.794 41.805 43.461 41.895 43.137C41.985 42.858 42.066 42.57 42.138 42.3C42.354 41.364 42.444 40.374 42.444 39.348C42.444 38.943 42.426 38.52 42.39 38.124C42.372 37.683 42.318 37.242 42.264 36.801C42.228 36.414 42.156 36.027 42.084 35.631C41.985 35.046 41.859 34.461 41.715 33.876L41.661 33.651C41.553 33.246 41.454 32.868 41.328 32.463C40.959 31.203 40.545 29.97 40.095 28.818C39.933 28.359 39.753 27.918 39.564 27.486C39.294 26.82 39.015 26.217 38.763 25.65C38.628 25.389 38.52 25.155 38.412 24.912C38.286 24.642 38.16 24.372 38.025 24.111C37.935 23.913 37.827 23.724 37.755 23.544L36.963 22.086C36.855 21.888 37.035 21.645 37.251 21.708L42.201 23.049H42.219C42.228 23.049 42.228 23.049 42.237 23.049L42.885 23.238L43.605 23.436L43.866 23.508V20.574C43.866 19.152 45 18 46.413 18C47.115 18 47.754 18.288 48.204 18.756C48.663 19.224 48.951 19.863 48.951 20.574V24.939L49.482 25.083C49.518 25.101 49.563 25.119 49.599 25.146C49.725 25.236 49.914 25.38 50.148 25.56C50.337 25.704 50.535 25.884 50.769 26.073C51.246 26.46 51.822 26.955 52.443 27.522C52.605 27.666 52.767 27.81 52.92 27.963C53.721 28.71 54.621 29.583 55.485 30.555C55.728 30.834 55.962 31.104 56.205 31.401C56.439 31.698 56.7 31.986 56.916 32.274C57.213 32.661 57.519 33.066 57.798 33.489C57.924 33.687 58.077 33.894 58.194 34.092C58.554 34.623 58.86 35.172 59.157 35.721C59.283 35.973 59.409 36.252 59.517 36.522C59.85 37.26 60.111 38.007 60.273 38.763C60.327 38.925 60.363 39.096 60.381 39.258V39.294C60.435 39.51 60.453 39.744 60.471 39.987C60.543 40.752 60.507 41.526 60.345 42.3C60.273 42.624 60.183 42.93 60.075 43.263C59.958 43.578 59.85 43.902 59.706 44.217C59.427 44.856 59.103 45.504 58.716 46.098C58.59 46.323 58.437 46.557 58.293 46.782C58.131 47.016 57.96 47.241 57.816 47.457C57.609 47.736 57.393 48.024 57.168 48.285C56.97 48.555 56.772 48.825 56.547 49.068C56.241 49.437 55.944 49.779 55.629 50.112C55.449 50.328 55.251 50.553 55.044 50.751C54.846 50.976 54.639 51.174 54.459 51.354C54.144 51.669 53.892 51.903 53.676 52.11L53.163 52.569C53.091 52.641 52.992 52.677 52.893 52.677H48.951V57.726H53.91C55.017 57.726 56.07 57.339 56.925 56.61C57.213 56.358 58.482 55.26 59.985 53.604C60.039 53.541 60.102 53.505 60.174 53.487L73.863 49.527C74.124 49.455 74.376 49.644 74.376 49.914V52.812Z" fill="white"/>
+								</svg>
+																
+							</div>
+							<span>Buy on Opensea.</span>
+						</button>
+					</a>
                 </div>
             </div>
-            <img src="img/man.png" alt="Man" class="w-3/4 mt-12 md:absolute -mt-6 md:mt-0 right-0 -z-1">
+            <img src="img/Group 1.png" alt="Man" class=" lg:w-2/4 md:absolute -mt-6 md:-mt-40 right-0 -z-1">
         </div>
     </div>
 
-		<!-- My work -->
+		<!-- My NFT -->
 		<div class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
 			<section class="w-full">
-				<h2 id="work" class="secondary-title">My work</h2>
-				<p class="section-paragraph">I’ve had the pleasure of working with multiple Fortune 500 companies, designing and implementing both frontend and backend.</p>
+				<h2 id="work" class="secondary-title">5000 UNIQUE NFTs</h2>
+				<p class="section-paragraph">Our in-house designer has carefully drawn all 152 traits, providing millions of possible combinations.
 
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-					<img src="https://images.unsplash.com/photo-1576153192396-180ecef2a715?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" class="w-full bg-nav h-36 lg:h-72 object-cover">
-					<img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" class="w-full bg-nav h-36 lg:h-72 object-cover">
-					<img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80" class="w-full hidden md:block bg-nav h-36 lg:h-72 object-cover">
-					<img src="https://images.unsplash.com/photo-1558655146-d09347e92766?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80" class="w-full hidden md:block bg-nav h-36 lg:h-72 object-cover">
-					<img src="https://images.unsplash.com/photo-1547119957-637f8679db1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" class="w-full hidden md:block bg-nav h-36 lg:h-72 object-cover">
-					<img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1336&q=80" class="w-full hidden md:block bg-nav h-36 lg:h-72 object-cover">
-					<img src="https://images.unsplash.com/photo-1603969072881-b0fc7f3d77d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80s" class="w-full hidden md:block bg-nav h-36 lg:h-72 object-cover">
-					<img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="w-full hidden md:block bg-nav h-36 lg:h-72 object-cover">
-					<img src="https://images.unsplash.com/photo-1545235617-7a424c1a60cc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=880&q=80" class="w-full hidden md:block md:col-span-2 lg:col-span-1 bg-nav h-36 lg:h-72 object-cover">
-				</div>
-			</section>
-		</div>
+					In order to maintain value and increase demand, only 5000 Fraty Fratz will ever be minted.</p>
 
-
-
-
-		<!-- Clients -->
-		<div class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
-			<section class="w-full">
-				<h2 id="clients" class="secondary-title">Clients</h2>
-				<p class="section-paragraph">I’ve had the pleasure of working with multiple Fortune 500 companies, designing and implementing both frontend and backend.</p>
-
-				<!-- Clients -->
-				<div class="space-y-12 my-16">
-					<div class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
-						
-						<!-- Client logo -->
-						<div class="mb-6 lg:mb-0">
-							<svg width="80" height="96" viewBox="0 0 80 96" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M66.6983 92.1599C61.5487 97.2095 55.867 96.4223 50.4513 94.0415C44.6936 91.6127 39.4299 91.4591 33.3492 94.0415C25.7767 97.3439 21.7577 96.3839 17.1972 92.1599C-8.55106 65.3759 -4.75058 24.5759 24.5131 23.0399C31.6105 23.4239 36.5796 27.0047 40.7601 27.3023C46.9739 26.0255 52.9216 22.3679 59.5724 22.8479C67.5629 23.5007 73.5392 26.6879 77.5297 32.4191C61.0926 42.4031 64.9881 64.2911 80.0855 70.4351C77.0641 78.4511 73.1876 86.3711 66.6888 92.2271L66.6983 92.1599ZM40.19 22.7519C39.4204 10.8479 48.9691 1.05595 59.9525 0.0959473C61.4632 13.8239 47.6009 24.0959 40.19 22.7519Z" fill="white"/></svg>
-						</div>
-
-						<!-- Client info -->
-						<div class="flex flex-wrap justify-center text-center lg:text-left lg:block">
-							<h3 class="text-white text-3xl font-semibold">Apple, inc.</h3>
-
-							<div class="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
-								<div class="badge">UI/UX</div>
-								<div class="badge">Frontend development</div>
-							</div>
-
-							<p class="text-secondary">I’ve had the pleasure of working with multiple Fortune 500 companies, designing and implementing both frontend and backend.</p>
-						</div>
-
-					</div>
-					<div class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
-						
-						<!-- Client logo -->
-						<div class="mb-6 lg:mb-0">
-							<svg width="80" height="96" viewBox="0 0 80 96" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M66.6983 92.1599C61.5487 97.2095 55.867 96.4223 50.4513 94.0415C44.6936 91.6127 39.4299 91.4591 33.3492 94.0415C25.7767 97.3439 21.7577 96.3839 17.1972 92.1599C-8.55106 65.3759 -4.75058 24.5759 24.5131 23.0399C31.6105 23.4239 36.5796 27.0047 40.7601 27.3023C46.9739 26.0255 52.9216 22.3679 59.5724 22.8479C67.5629 23.5007 73.5392 26.6879 77.5297 32.4191C61.0926 42.4031 64.9881 64.2911 80.0855 70.4351C77.0641 78.4511 73.1876 86.3711 66.6888 92.2271L66.6983 92.1599ZM40.19 22.7519C39.4204 10.8479 48.9691 1.05595 59.9525 0.0959473C61.4632 13.8239 47.6009 24.0959 40.19 22.7519Z" fill="white"/></svg>
-						</div>
-
-						<!-- Client info -->
-						<div class="flex flex-wrap justify-center text-center lg:text-left lg:block">
-							<h3 class="text-white text-3xl font-semibold">Apple, inc.</h3>
-
-							<div class="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
-								<div class="badge">UI/UX</div>
-								<div class="badge">Frontend development</div>
-							</div>
-
-							<p class="text-secondary">I’ve had the pleasure of working with multiple Fortune 500 companies, designing and implementing both frontend and backend.</p>
-						</div>
-
-					</div>
-					<div class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
-						
-						<!-- Client logo -->
-						<div class="mb-6 lg:mb-0">
-							<svg width="80" height="96" viewBox="0 0 80 96" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M66.6983 92.1599C61.5487 97.2095 55.867 96.4223 50.4513 94.0415C44.6936 91.6127 39.4299 91.4591 33.3492 94.0415C25.7767 97.3439 21.7577 96.3839 17.1972 92.1599C-8.55106 65.3759 -4.75058 24.5759 24.5131 23.0399C31.6105 23.4239 36.5796 27.0047 40.7601 27.3023C46.9739 26.0255 52.9216 22.3679 59.5724 22.8479C67.5629 23.5007 73.5392 26.6879 77.5297 32.4191C61.0926 42.4031 64.9881 64.2911 80.0855 70.4351C77.0641 78.4511 73.1876 86.3711 66.6888 92.2271L66.6983 92.1599ZM40.19 22.7519C39.4204 10.8479 48.9691 1.05595 59.9525 0.0959473C61.4632 13.8239 47.6009 24.0959 40.19 22.7519Z" fill="white"/></svg>
-						</div>
-
-						<!-- Client info -->
-						<div class="flex flex-wrap justify-center text-center lg:text-left lg:block">
-							<h3 class="text-white text-3xl font-semibold">Apple, inc.</h3>
-
-							<div class="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
-								<div class="badge">UI/UX</div>
-								<div class="badge">Frontend development</div>
-							</div>
-
-							<p class="text-secondary">I’ve had the pleasure of working with multiple Fortune 500 companies, designing and implementing both frontend and backend.</p>
-						</div>
-
-					</div>
-				</div>
-
-			</section>
-		</div>
-
-
-		<!-- Hire me -->
-		<div class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
-			<section class="w-full">
-				<h2 id="hire" class="secondary-title">Hire me</h2>
-				<p class="section-paragraph">Feel free to to contact me any time, through any method below.</p>
-
-				<div class="w-full grid lg:grid-cols-2 gap-8 lg:gap-32 mt-24">
-					<div class="space-y-12">
-						<div>
-							<label class="text-white block mb-6 text-xl font-bold">Name</label>
-							<input class="w-full border border-input-border bg-input px-4 py-4">
-						</div>
-						<div>
-							<label class="text-white block mb-6 text-xl font-bold">Email</label>
-							<input type="email" class="w-full border border-input-border bg-input px-4 py-4">
-						</div>
-						<div>
-							<label class="text-white block mb-6 text-xl font-bold">Message</label>
-							<textarea type="email" class="w-full border border-input-border bg-input px-4 py-4 h-56 resize-none"></textarea>
-						</div>
-						<button class="px-6 py-2 bg-theme text-white font-bold">Send it!</button>
-					</div>
-
-					<div class="mt-12">
-						<!-- Contact info -->
-						<p class="text-secondary">555-555-1234</p>
-						<a href="mailto:email@mydomain.com" class="text-secondary underline mt-3 block">email@mydomain.com</a>
-
-						<!-- Socials -->
-						<div class="flex mt-20 space-x-6">
-							<!-- Skype -->
-							<a href="#">
-								<svg class="w-8 h-8 lg:w-12 lg:h-12" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M43.1494 28.252C43.3496 27.1533 43.457 26.0303 43.457 24.9072C43.457 22.417 42.9688 20 42.0068 17.7295C41.0791 15.5322 39.7461 13.5596 38.0518 11.8652C36.3716 10.1808 34.3799 8.83914 32.1875 7.91504C29.9121 6.95313 27.5 6.46484 25.0098 6.46484C23.8379 6.46484 22.6611 6.57715 21.5186 6.79687C19.9376 5.9591 18.176 5.51995 16.3867 5.51758C13.4717 5.51758 10.7275 6.65527 8.66699 8.71582C7.65021 9.72738 6.84403 10.9305 6.29507 12.2555C5.74611 13.5806 5.46526 15.0013 5.46875 16.4355C5.46875 18.291 5.94727 20.1172 6.84082 21.7285C6.66016 22.7734 6.5625 23.8428 6.5625 24.9072C6.5625 27.3975 7.05078 29.8145 8.0127 32.085C8.94043 34.2822 10.2686 36.2549 11.9629 37.9492C13.6572 39.6436 15.6299 40.9717 17.8272 41.8994C20.1025 42.8613 22.5147 43.3496 25.0049 43.3496C26.0889 43.3496 27.1729 43.252 28.2373 43.0615C29.8731 43.9844 31.7188 44.4775 33.6084 44.4775C36.5234 44.4775 39.2676 43.3447 41.3281 41.2793C43.3936 39.2188 44.5264 36.4746 44.5264 33.5596C44.5313 31.7041 44.0527 29.873 43.1494 28.252ZM25.083 36.2061C18.5303 36.2061 15.6006 32.9834 15.6006 30.5713C15.6006 29.3311 16.5137 28.4668 17.7734 28.4668C20.5762 28.4668 19.8535 32.4951 25.083 32.4951C27.7637 32.4951 29.2432 31.04 29.2432 29.5508C29.2432 28.6572 28.8037 27.6611 27.0361 27.2266L21.2061 25.7715C16.5137 24.5947 15.6592 22.0557 15.6592 19.6729C15.6592 14.7217 20.3223 12.8613 24.7022 12.8613C28.7354 12.8613 33.4912 15.0928 33.4912 18.0615C33.4912 19.3359 32.3877 20.0732 31.1279 20.0732C28.7354 20.0732 29.1748 16.7627 24.3555 16.7627C21.9629 16.7627 20.6397 17.8467 20.6397 19.3945C20.6397 20.9424 22.5293 21.4355 24.1699 21.8115L28.4863 22.7686C33.2129 23.8232 34.4092 26.582 34.4092 29.1797C34.4092 33.1982 31.3184 36.2061 25.083 36.2061Z" fill="white"/></svg>
-							</a>
-							<!-- Twitter -->
-							<a href="#">
-								<svg class="w-8 h-8 lg:w-12 lg:h-12" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 0C9.40313 0 0 9.40313 0 21C0 32.5969 9.40313 42 21 42C32.5969 42 42 32.5969 42 21C42 9.40313 32.5969 0 21 0ZM31.0922 15.8297C31.1062 16.05 31.1062 16.2797 31.1062 16.5047C31.1062 23.3859 25.8656 31.3125 16.2891 31.3125C13.3359 31.3125 10.5984 30.4547 8.29219 28.9781C8.71406 29.025 9.11719 29.0437 9.54844 29.0437C11.9859 29.0437 14.2266 28.2188 16.0125 26.8219C13.725 26.775 11.8031 25.275 11.1469 23.2125C11.9484 23.3297 12.6703 23.3297 13.4953 23.1188C12.3175 22.8795 11.2588 22.2398 10.4991 21.3084C9.73949 20.377 9.32572 19.2113 9.32812 18.0094V17.9437C10.0172 18.3328 10.8281 18.5719 11.6766 18.6047C10.9633 18.1293 10.3784 17.4854 9.97365 16.7298C9.5689 15.9743 9.35683 15.1306 9.35625 14.2734C9.35625 13.3031 9.60938 12.4172 10.0641 11.6484C11.3714 13.2578 13.0028 14.5741 14.8522 15.5117C16.7016 16.4493 18.7275 16.9873 20.7984 17.0906C20.0625 13.5516 22.7063 10.6875 25.8844 10.6875C27.3844 10.6875 28.7344 11.3156 29.6859 12.3281C30.8625 12.1078 31.9875 11.6672 32.9906 11.0766C32.6016 12.2812 31.7859 13.2984 30.7031 13.9406C31.7531 13.8281 32.7656 13.5375 33.7031 13.1297C32.9953 14.1703 32.1094 15.0938 31.0922 15.8297Z" fill="white"/></svg>								
-							</a>
-						</div>
-					</div>
+				<div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+					<img src="https://i.ibb.co/HTgjFjf/Rat-Base.png" class="w-full cursor-pointer transform duration-500 hover:-translate-y-1 rounded-xl bg-nav h-36 lg:h-auto object-fill">
+					<img src="https://i.ibb.co/HTgjFjf/Rat-Base.png" class="w-full cursor-pointer transform duration-500 hover:-translate-y-1 rounded-xl  md:block bg-nav h-auto lg:h-auto object-fill">
+					<img src="https://i.ibb.co/HTgjFjf/Rat-Base.png" class="w-full cursor-pointer transform duration-500 hover:-translate-y-1 rounded-xl  md:block bg-nav h-auto lg:h-auto object-fill">
+					<img src="https://i.ibb.co/HTgjFjf/Rat-Base.png" class="w-full cursor-pointer transform duration-500 hover:-translate-y-1 rounded-xl bg-nav h-36 lg:h-auto object-fill">
+					<img src="https://i.ibb.co/HTgjFjf/Rat-Base.png" class="w-full cursor-pointer transform duration-500 hover:-translate-y-1 rounded-xl   md:block bg-nav h-36 lg:h-auto object-fill">
+					<img src="https://i.ibb.co/HTgjFjf/Rat-Base.png" class="w-full cursor-pointer transform duration-500 hover:-translate-y-1 rounded-xl  md:block bg-nav h-36 lg:h-auto object-fill">
+					<img src="https://i.ibb.co/HTgjFjf/Rat-Base.png" class="w-full cursor-pointer transform duration-500 hover:-translate-y-1 rounded-xl   md:block bg-nav h-36 lg:h-auto object-fill">
+					<img src="https://i.ibb.co/HTgjFjf/Rat-Base.png" class="w-full cursor-pointer transform duration-500 hover:-translate-y-1 rounded-xl  md:block bg-nav h-36 lg:h-auto object-fill">
 					
 				</div>
+			</section>
+		</div>
+		
+		<!-- Roadmap -->
+		<section id="roadmap">
+			<div class="bg-[#301934] text-white py-8 mt-40">
+			<div class="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
+			  <div class="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8">
+				<p class="secondary-title leading-normal md:leading-relaxed mb-2">Roadmap</p>
+				<img class="mx-auto mt-10 md:mt-10" src="img/FratRatzRocket.png" />
+				
+			  </div>
+			  <div class="ml-0 md:ml-12 lg:w-2/3 sticky">
+				<div class="container mx-auto w-full h-full">
+				  <div class="relative wrap overflow-hidden p-10 h-full">
+					<div class="border-2-2 border-yellow-555 absolute h-full border"
+					  style="right: 50%; border: 2px solid #FFC100; border-radius: 1%;"></div>
+					<div class="border-2-2 border-yellow-555 absolute h-full border"
+					  style="left: 50%; border: 2px solid #FFC100; border-radius: 1%;"></div>
+					<div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+					  <div class="order-1 w-5/12"></div>
+					  <div class="order-1 w-5/12 px-1 py-4 text-right">
+						<p class="mb-3 text-base text-yellow-300">Phase 1</p>
+						<h4 class="mb-3 font-bold text-lg md:text-2xl">Lorem Ipsum</h4>
+						<p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+							incididunt ut labore et dolore magna aliqua. 
+						</p>
+					  </div>
+					</div>
+					<div class="mb-8 flex justify-between items-center w-full right-timeline">
+					  <div class="order-1 w-5/12"></div>
+					  <div class="order-1  w-5/12 px-1 py-4 text-left">
+						<p class="mb-3 text-base text-yellow-300">Phase 2</p>
+						<h4 class="mb-3 font-bold text-lg md:text-2xl">Lorem Ipsum</h4>
+						<p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+							incididunt ut labore et dolore magna aliqua. 
+						</p>
+					  </div>
+					</div>
+					<div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+					  <div class="order-1 w-5/12"></div>
+					  <div class="order-1 w-5/12 px-1 py-4 text-right">
+						<p class="mb-3 text-base text-yellow-300"> Phase 3</p>
+						<h4 class="mb-3 font-bold text-lg md:text-2xl">Lorem Ipsum</h4>
+						<p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+							incididunt ut labore et dolore magna aliqua. 
+						</p>
+					  </div>
+					</div>
+		
+					<div class="mb-8 flex justify-between items-center w-full right-timeline">
+					  <div class="order-1 w-5/12"></div>
+		
+					  <div class="order-1  w-5/12 px-1 py-4">
+						<p class="mb-3 text-base text-yellow-300">Phase 4</p>
+						<h4 class="mb-3 font-bold  text-lg md:text-2xl text-left">Lorem Ipsum</h4>
+						<p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+							incididunt ut labore et dolore magna aliqua. 
+						</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  </section>
+
+
+
+		<!-- Team -->
+		<div class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+			<section class="w-full">
+				<h2 id="team" class="secondary-title">Team</h2>
+				<p class="section-paragraph">The core team is born in Los Angeles, CA - a team of human beans with backgrounds in crypto, technology, and gaming working to build a decentralized brand of the future.</p>
+
+				<!-- Team -->
+				<div class="space-y-12 my-16">
+					<div class="w-full border border-nav p-16 lg:px-22 lg:py-10 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
+						
+						<!-- Team logo -->
+						<div class="mb-6 lg:mb-0">
+							<img src="https://i.ibb.co/HTgjFjf/Rat-Base.png" class="w-full rounded-xl  md:block bg-nav h-36 lg:h-auto object-fill">
+						</div>
+
+						<!-- Team info -->
+						<div class="flex flex-wrap justify-center text-center lg:text-left lg:block">
+							<h3 class="text-white text-3xl font-semibold">John Doe</h3>
+
+							<div class="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
+								<div class="badge">Lead</div>
+								<div class="badge">Developer</div>
+							</div>
+
+							<p class="text-secondary">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+								incididunt ut labore et dolore magna aliqua. 
+							</p>
+						</div>
+
+					</div>
+					<div class="w-full border border-nav p-16 lg:px-22 lg:py-10 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
+						
+						<!-- Team logo -->
+						<div class="mb-6 lg:mb-0">
+							<img src="https://i.ibb.co/HTgjFjf/Rat-Base.png" class="w-full rounded-xl  md:block bg-nav h-36 lg:h-auto object-fill">
+						</div>
+
+						<!-- Team info -->
+						<div class="flex flex-wrap justify-center text-center lg:text-left lg:block">
+							<h3 class="text-white text-3xl font-semibold">John Doe</h3>
+
+							<div class="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
+								<div class="badge">Lead</div>
+								<div class="badge">Developer</div>
+							</div>
+
+							<p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+								incididunt ut labore et dolore magna aliqua. 
+							</p>
+						</div>
+
+					</div>
+				</div>
 
 			</section>
 		</div>
 
+
+		<!-- FAQ -->
+		<div id="faq" class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+			<section class="w-full">
+				<h2 id="hire" class="secondary-title">FAQ</h2>
+				<p class="section-paragraph">Feel free to to contact us any time, through any questions below.</p>
+
+				<div x-data="accordion" class="w-full grid lg:grid-cols-2 gap-8 lg:gap-10 mt-24">
+					<!-- Accordion 1 -->
+						<div @click="selected != 1 ? selected = 1 : selected =null" class="w-full">
+							<!-- Head 1 -->
+							<div class="bg-gray-500 flex justify-between py-3 px-4 mb-2 text-xl font-bold">
+								<h1>Lorem Ipsum</h1>
+								<svg xmlns="http://www.w3.org/2000/svg" x-bind:class="selected == 1? 'transform rotate-180':''" class="h-6 w-6 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+								  </svg>
+							</div>
+							<!-- Content 1 -->
+							<div class="max-h-0 overflow-hidden transition-all duration-300" x-ref="tab1" 
+								:style="selected == 1 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''"> 
+								<p class="p-3 text-justify">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+									incididunt ut labore et dolore magna aliqua. 
+									Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</p>
+							</div>
+						</div>
+						
+						<!-- Accordion 2 -->
+						<div @click="selected != 2 ? selected = 2 : selected =null" class="w-full">
+							<!-- Head 2 -->
+							<div class="bg-gray-500 flex justify-between py-3 px-4 mb-2 text-xl font-bold">
+								<h1>Lorem Ipsum</h1>
+								<svg xmlns="http://www.w3.org/2000/svg" x-bind:class="selected == 2? 'transform rotate-180':''" class="h-6 w-6 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+								  </svg>
+							</div>
+							<!-- Content 2 -->
+							<div class="max-h-0 overflow-hidden transition-all duration-300" x-ref="tab2" 
+								:style="selected == 2 ? 'max-height: '+ $refs.tab2.scrollHeight+ 'px;':''"> 
+								<p class="p-3 text-justify">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+									incididunt ut labore et dolore magna aliqua. 
+									Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</p>
+							</div>
+						</div>
+						<!-- Accordion 3 -->
+						<div @click="selected != 3 ? selected = 3 : selected =null" class="w-full">
+							<!-- Head 3 -->
+							<div class="bg-gray-500 flex justify-between py-3 px-4 mb-2 text-xl font-bold">
+								<h1>Lorem Ipsum</h1>
+								<svg xmlns="http://www.w3.org/2000/svg" x-bind:class="selected == 3? 'transform rotate-180':''" class="h-6 w-6 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+								  </svg>
+							</div>
+							<!-- Content 3 -->
+							<div class="max-h-0 overflow-hidden transition-all duration-300" x-ref="tab1" 
+								:style="selected == 3 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''"> 
+								<p class="p-3 text-justify">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+									incididunt ut labore et dolore magna aliqua. 
+									Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</p>
+							</div>
+						</div>
+						<!-- Accordion 4 -->
+						<div @click="selected != 4 ? selected = 4 : selected =null" class="w-full">
+							<!-- Head 4 -->
+							<div class="bg-gray-500 flex justify-between py-3 px-4 mb-2 text-xl font-bold">
+								<h1>Lorem Ipsum</h1>
+								<svg xmlns="http://www.w3.org/2000/svg" x-bind:class="selected == 4? 'transform rotate-180':''" 
+									class="h-6 w-6 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+								  </svg>
+							</div>
+							<!-- Content 4 -->
+							<div class="max-h-0 overflow-hidden transition-all duration-300" x-ref="tab1" 
+								:style="selected == 4 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''"> 
+								<p class="p-3 text-justify">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+									incididunt ut labore et dolore magna aliqua. 
+									Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</p>
+							</div>
+						</div>
+						
+					
+				</div>
+			</section>
+		</div>
+
+		<footer class="text-center bg-body -bottom-10 text-white mt-64">
+			<div class=" container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full justify-between">
+				<div>
+					<img src="img/logorat.png" alt="logo" class="w-24 lg:w-24 h-auto"/>
+				</div>
+				<div class="flex space-x-5">
+					<a href="https://twitter.com/" target="_blank" class="">
+						<svg class="hover:fill-current" width="25" height="25" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_17_80)">
+							<path d="M15.1003 43.5C33.2091 43.5 43.1166 28.4935 43.1166 15.4838C43.1166 15.0619 43.1072 14.6307 43.0884 14.2088C45.0158 12.815 46.679 11.0886 48 9.11066C46.205 9.90926 44.2993 10.4308 42.3478 10.6575C44.4026 9.42588 45.9411 7.491 46.6781 5.21159C44.7451 6.35718 42.6312 7.16528 40.4269 7.60128C38.9417 6.02318 36.978 4.97829 34.8394 4.62816C32.7008 4.27803 30.5064 4.64216 28.5955 5.66425C26.6846 6.68635 25.1636 8.30947 24.2677 10.2827C23.3718 12.2559 23.1509 14.4693 23.6391 16.5807C19.725 16.3842 15.8959 15.3675 12.4 13.5963C8.90405 11.825 5.81939 9.33893 3.34594 6.29909C2.0888 8.46655 1.70411 11.0314 2.27006 13.4722C2.83601 15.9131 4.31013 18.047 6.39281 19.44C4.82926 19.3904 3.29995 18.9694 1.93125 18.2119V18.3338C1.92985 20.6084 2.7162 22.8132 4.15662 24.5736C5.59704 26.334 7.60265 27.5412 9.8325 27.99C8.38411 28.3863 6.86396 28.4441 5.38969 28.1588C6.01891 30.1149 7.24315 31.8258 8.89154 33.0527C10.5399 34.2796 12.5302 34.9613 14.5847 35.0025C11.0968 37.7423 6.78835 39.2283 2.35313 39.2213C1.56657 39.2201 0.780798 39.1719 0 39.0769C4.50571 41.9676 9.74706 43.5028 15.1003 43.5Z" fill="white"/>
+							</g>
+							<defs>
+							<clipPath id="clip0_17_80">
+							<rect width="48" height="48" fill="white"/>
+							</clipPath>
+							</defs>
+							</svg>
+					</a>
+					<a href="https://discord.com/" target="_blank" class="">
+						<svg width="25" height="25" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M40.634 8.31127C37.5747 6.90751 34.294 5.87327 30.8638 5.28093C30.8013 5.2695 30.7389 5.29806 30.7067 5.3552C30.2848 6.10563 29.8175 7.08463 29.4902 7.85412C25.8008 7.30178 22.1304 7.30178 18.5166 7.85412C18.1893 7.06753 17.705 6.10563 17.2811 5.3552C17.249 5.29997 17.1866 5.2714 17.1241 5.28093C13.6958 5.87138 10.4151 6.90561 7.35387 8.31127C7.32737 8.32269 7.30465 8.34176 7.28958 8.3665C1.06678 17.6632 -0.6379 26.7314 0.19836 35.6872C0.202144 35.731 0.22674 35.7729 0.260796 35.7996C4.36642 38.8147 8.34341 40.6451 12.2466 41.8583C12.309 41.8774 12.3752 41.8546 12.415 41.8031C13.3383 40.5423 14.1613 39.2128 14.867 37.8147C14.9086 37.7328 14.8688 37.6357 14.7837 37.6033C13.4783 37.1081 12.2352 36.5043 11.0395 35.8187C10.9449 35.7634 10.9373 35.6281 11.0243 35.5634C11.2759 35.3748 11.5276 35.1786 11.7679 34.9805C11.8114 34.9444 11.872 34.9367 11.9231 34.9596C19.7786 38.5461 28.2831 38.5461 36.0459 34.9596C36.097 34.9348 36.1576 34.9425 36.203 34.9787C36.4433 35.1767 36.6949 35.3748 36.9484 35.5634C37.0354 35.6281 37.0298 35.7634 36.9352 35.8187C35.7394 36.5176 34.4964 37.1081 33.189 37.6014C33.1039 37.6338 33.0661 37.7328 33.1077 37.8147C33.8285 39.2108 34.6515 40.5403 35.5578 41.8012C35.5956 41.8546 35.6637 41.8774 35.7262 41.8583C39.6483 40.6451 43.6252 38.8147 47.7309 35.7996C47.7668 35.7729 47.7895 35.7329 47.7933 35.6891C48.7942 25.3352 46.117 16.3414 40.6964 8.3684C40.6832 8.34176 40.6605 8.32269 40.634 8.31127ZM16.04 30.2341C13.675 30.2341 11.7263 28.0628 11.7263 25.3962C11.7263 22.7297 13.6372 20.5584 16.04 20.5584C18.4617 20.5584 20.3916 22.7487 20.3538 25.3962C20.3538 28.0628 18.4428 30.2341 16.04 30.2341ZM31.9895 30.2341C29.6245 30.2341 27.6758 28.0628 27.6758 25.3962C27.6758 22.7297 29.5867 20.5584 31.9895 20.5584C34.4113 20.5584 36.3411 22.7487 36.3033 25.3962C36.3033 28.0628 34.4113 30.2341 31.9895 30.2341Z" fill="white"/>
+							</svg>
+							
+					</a>
+					<a href="https://instagram.com/" target="_blank" class="">
+						<svg width="25" height="25" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M24 4.32187C30.4125 4.32187 31.1719 4.35 33.6938 4.4625C36.0375 4.56562 37.3031 4.95938 38.1469 5.2875C39.2625 5.71875 40.0688 6.24375 40.9031 7.07812C41.7469 7.92188 42.2625 8.71875 42.6938 9.83438C43.0219 10.6781 43.4156 11.9531 43.5188 14.2875C43.6313 16.8187 43.6594 17.5781 43.6594 23.9813C43.6594 30.3938 43.6313 31.1531 43.5188 33.675C43.4156 36.0188 43.0219 37.2844 42.6938 38.1281C42.2625 39.2438 41.7375 40.05 40.9031 40.8844C40.0594 41.7281 39.2625 42.2438 38.1469 42.675C37.3031 43.0031 36.0281 43.3969 33.6938 43.5C31.1625 43.6125 30.4031 43.6406 24 43.6406C17.5875 43.6406 16.8281 43.6125 14.3063 43.5C11.9625 43.3969 10.6969 43.0031 9.85313 42.675C8.7375 42.2438 7.93125 41.7188 7.09688 40.8844C6.25313 40.0406 5.7375 39.2438 5.30625 38.1281C4.97813 37.2844 4.58438 36.0094 4.48125 33.675C4.36875 31.1438 4.34063 30.3844 4.34063 23.9813C4.34063 17.5688 4.36875 16.8094 4.48125 14.2875C4.58438 11.9437 4.97813 10.6781 5.30625 9.83438C5.7375 8.71875 6.2625 7.9125 7.09688 7.07812C7.94063 6.23438 8.7375 5.71875 9.85313 5.2875C10.6969 4.95938 11.9719 4.56562 14.3063 4.4625C16.8281 4.35 17.5875 4.32187 24 4.32187ZM24 0C17.4844 0 16.6688 0.028125 14.1094 0.140625C11.5594 0.253125 9.80625 0.665625 8.2875 1.25625C6.70312 1.875 5.3625 2.69062 4.03125 4.03125C2.69063 5.3625 1.875 6.70313 1.25625 8.27813C0.665625 9.80625 0.253125 11.55 0.140625 14.1C0.028125 16.6687 0 17.4844 0 24C0 30.5156 0.028125 31.3312 0.140625 33.8906C0.253125 36.4406 0.665625 38.1938 1.25625 39.7125C1.875 41.2969 2.69063 42.6375 4.03125 43.9688C5.3625 45.3 6.70313 46.125 8.27813 46.7344C9.80625 47.325 11.55 47.7375 14.1 47.85C16.6594 47.9625 17.475 47.9906 23.9906 47.9906C30.5063 47.9906 31.3219 47.9625 33.8813 47.85C36.4313 47.7375 38.1844 47.325 39.7031 46.7344C41.2781 46.125 42.6188 45.3 43.95 43.9688C45.2812 42.6375 46.1063 41.2969 46.7156 39.7219C47.3063 38.1938 47.7188 36.45 47.8313 33.9C47.9438 31.3406 47.9719 30.525 47.9719 24.0094C47.9719 17.4938 47.9438 16.6781 47.8313 14.1188C47.7188 11.5688 47.3063 9.81563 46.7156 8.29688C46.125 6.70312 45.3094 5.3625 43.9688 4.03125C42.6375 2.7 41.2969 1.875 39.7219 1.26562C38.1938 0.675 36.45 0.2625 33.9 0.15C31.3313 0.028125 30.5156 0 24 0Z" fill="white"/>
+							<path d="M24 11.6719C17.1938 11.6719 11.6719 17.1938 11.6719 24C11.6719 30.8062 17.1938 36.3281 24 36.3281C30.8062 36.3281 36.3281 30.8062 36.3281 24C36.3281 17.1938 30.8062 11.6719 24 11.6719ZM24 31.9969C19.5844 31.9969 16.0031 28.4156 16.0031 24C16.0031 19.5844 19.5844 16.0031 24 16.0031C28.4156 16.0031 31.9969 19.5844 31.9969 24C31.9969 28.4156 28.4156 31.9969 24 31.9969Z" fill="white"/>
+							<path d="M39.6937 11.1843C39.6937 12.778 38.4 14.0624 36.8156 14.0624C35.2219 14.0624 33.9375 12.7687 33.9375 11.1843C33.9375 9.59053 35.2313 8.30615 36.8156 8.30615C38.4 8.30615 39.6937 9.5999 39.6937 11.1843Z" fill="white"/>
+							</svg>							
+					</a>
+				</div>
+			</div>
+		  </footer>
+
         <script src="main.js"></script>
+		<script>
+			function accordion() {
+				return {
+					selected: null
+				}
+			}
+		</script>
 
 </body>
 </html>
