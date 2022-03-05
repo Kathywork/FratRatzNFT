@@ -1,1 +1,2 @@
 # FratRatz
+# FratRatzNFT
